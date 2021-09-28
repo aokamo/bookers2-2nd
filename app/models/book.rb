@@ -4,6 +4,4 @@ class Book < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  resources :books
-  resources :users,only: [:index, :show, :edit, :update]
 end
