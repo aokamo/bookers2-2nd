@@ -1,0 +1,16 @@
+<table class = "table table-striped">
+  <thead>
+    <th>image</th>
+    <th>name</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% users.each do |user| %>
+      <tr>
+        <td><%= attachment_image_tag(user, :profile_image, :fill, 50, 50, fallback: "noimage-1.png", size: '100x100') %></td>
+        <td><%= user.name %></td>
+        <td><%= link_to "Show", book_path(user.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

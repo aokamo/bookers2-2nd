@@ -2,6 +2,7 @@ class BooksController < ApplicationController
   before_action :authenticate_user!
 
   def index
+
   end
 
   def show
@@ -20,9 +21,7 @@ class BooksController < ApplicationController
       redirect_to book_path(@book), notice:'You have created book successfully.'
     else
       render :index
-
-
-
+    end
   end
 
   def update
