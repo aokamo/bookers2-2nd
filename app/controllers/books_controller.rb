@@ -17,7 +17,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    if @book.saved
+    if @book.save
       redirect_to book_path(@book), notice:'You have created book successfully.'
     else
       render :index
